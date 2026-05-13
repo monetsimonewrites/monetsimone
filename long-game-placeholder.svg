@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#1a1a1a"/>
+  <rect x="20" y="20" width="360" height="560" fill="none" stroke="#c8a96e" stroke-width="1" opacity="0.4"/>
+  <text x="200" y="180" font-family="Georgia, serif" font-size="13" fill="#c8a96e" text-anchor="middle" letter-spacing="4">STARTING LINEUP · BOOK 2</text>
+  <line x1="80" y1="210" x2="320" y2="210" stroke="#c8a96e" stroke-width="0.5" opacity="0.4"/>
+  <text x="200" y="300" font-family="Georgia, serif" font-size="42" fill="#f5f0e8" text-anchor="middle" font-style="italic">The</text>
+  <text x="200" y="360" font-family="Georgia, serif" font-size="42" fill="#f5f0e8" text-anchor="middle" font-style="italic">Long Game</text>
+  <line x1="80" y1="400" x2="320" y2="400" stroke="#c8a96e" stroke-width="0.5" opacity="0.4"/>
+  <text x="200" y="460" font-family="Georgia, serif" font-size="16" fill="#c8a96e" text-anchor="middle" letter-spacing="3">MONET SIMONE</text>
+  <text x="200" y="540" font-family="Georgia, serif" font-size="11" fill="#666" text-anchor="middle" letter-spacing="2">COMING JULY 2026</text>
+</svg>
