@@ -359,9 +359,9 @@
 
     /* ── TICKER (mid-page) ── */
     .ticker-mid {
-      background: var(--cream);
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
+      background: var(--red);
+      border-top: none;
+      border-bottom: none;
       padding: 16px 0;
       overflow: hidden;
       white-space: nowrap;
@@ -370,11 +370,11 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 18px;
-      color: var(--mid);
+      color: var(--white);
       animation: ticker 24s linear infinite;
     }
     .ticker-mid .ticker-inner span { margin: 0 48px; }
-    .ticker-mid .ticker-inner span.star { color: var(--red); font-style: normal; font-size: 12px; }
+    .ticker-mid .ticker-inner span.star { color: rgba(255,255,255,0.6); font-style: normal; font-size: 12px; }
 
     /* ── ABOUT ── */
     #about {
@@ -673,7 +673,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:var(--dark);">Monet Simone</a>
+    <a href="#" class="nav-logo"><img src="logo.png" alt="Monet Simone" style="height:56px;width:auto;display:block;" /></a>
     <ul class="nav-links">
       <li><a href="#books">Books</a></li>
       <li><a href="#about">About</a></li>
@@ -713,8 +713,8 @@
     </div>
     <div class="hero-right fade-up" style="transition-delay:0.2s">
       <div class="book-stack">
-        <img src="long-game-placeholder.svg" alt="The Long Game" class="book-back" />
         <img src="beyond-the-arc.png" alt="Beyond the Arc by Monet Simone" class="book-front" />
+        <img src="long-game-placeholder.svg" alt="The Long Game" class="book-back" />
         <span class="coming-soon-badge">Coming July 2026</span>
       </div>
     </div>
@@ -830,7 +830,7 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:4px;">Monet Simone</div>
+          <img src="logo.png" alt="Monet Simone" style="height:64px;width:auto;display:block;margin-bottom:4px;" />
           <div class="footer-brand-sub">Author · Starting Lineup Series</div>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
