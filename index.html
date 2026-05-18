@@ -25,7 +25,8 @@
 
     body {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      background: var(--white);
+      background: linear-gradient(160deg, #fff5f0 0%, #ffe8e0 40%, #ffd6c8 100%);
+      background-attachment: fixed;
       color: var(--dark);
       overflow-x: hidden;
     }
@@ -34,7 +35,7 @@
 
     /* ── TICKER ── */
     .ticker {
-      background: var(--dark);
+      background: #000000;
       color: var(--white);
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
@@ -60,24 +61,20 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid #e8e8e8;
+      background: rgba(255, 245, 240, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(200,100,80,0.15);
       padding: 0 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 72px;
     }
-    .nav-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 20px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--red);
-      line-height: 1.1;
+    .nav-logo img {
+      height: 56px;
+      width: auto;
+      display: block;
     }
-    .nav-logo span { display: block; }
     .nav-links {
       display: flex;
       align-items: center;
@@ -130,7 +127,7 @@
     .hero-left { max-width: 580px; }
     .hero-eyebrow {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 20px;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--mid);
@@ -151,14 +148,14 @@
     .hero-headline .word-chem { color: var(--red); }
     .hero-tagline {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px;
+      font-size: 20px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--mid);
       margin-bottom: 20px;
     }
     .hero-bio {
-      font-size: 18px;
+      font-size: 22px;
       line-height: 1.65;
       color: #444;
       font-style: italic;
@@ -172,7 +169,7 @@
     }
     .btn-primary {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px;
+      font-size: 16px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       background: var(--dark);
@@ -185,7 +182,7 @@
     .btn-primary:hover { background: var(--red); border-color: var(--red); }
     .btn-ghost {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px;
+      font-size: 16px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       background: transparent;
@@ -204,28 +201,37 @@
     }
     .book-stack {
       position: relative;
-      width: 260px;
-      height: 380px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
     }
     .book-stack img {
-      position: absolute;
       border-radius: 2px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+      width: 160px;
+      position: static;
+      transform: none;
     }
     .book-stack .book-back {
-      width: 200px;
-      top: 30px;
-      left: 60px;
-      transform: rotate(4deg);
-      opacity: 0.6;
-      filter: brightness(0.85);
+      width: 160px;
+      opacity: 1;
+      filter: none;
     }
     .book-stack .book-front {
-      width: 220px;
-      top: 0;
-      left: 0;
-      transform: rotate(-2deg);
-      z-index: 2;
+      width: 160px;
+    }
+    .coming-soon-badge {
+      position: absolute;
+      bottom: -28px;
+      right: 0;
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      z-index: 3;
     }
 
     /* ── SECTION DIVIDER ── */
@@ -250,7 +256,7 @@
     }
     .section-eyebrow {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 22px;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--red);
@@ -288,7 +294,7 @@
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 800;
       font-size: 80px;
-      color: #f0f0f0;
+      color: #333333;
       line-height: 1;
       z-index: 0;
       user-select: none;
@@ -416,7 +422,7 @@
     }
     .about-eyebrow {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 22px;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--red);
@@ -440,7 +446,7 @@
 
     /* ── PULLQUOTE ── */
     .pullquote-section {
-      background: var(--dark);
+      background: var(--red);
       padding: 80px 40px;
       text-align: center;
     }
@@ -455,7 +461,7 @@
     }
     .pullquote-attr {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 18px;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--red);
@@ -551,8 +557,8 @@
 
     /* ── FOOTER ── */
     footer {
-      background: var(--cream);
-      border-top: 1px solid #e8e8e8;
+      background: rgba(255, 220, 200, 0.3);
+      border-top: 1px solid rgba(200,100,80,0.15);
       padding: 60px 40px 40px;
     }
     .footer-inner {
@@ -667,7 +673,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo"><span>MONET</span><span>SIMONE</span></a>
+    <a href="#" class="nav-logo" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:3px;text-transform:uppercase;color:var(--dark);">Monet Simone</a>
     <ul class="nav-links">
       <li><a href="#books">Books</a></li>
       <li><a href="#about">About</a></li>
@@ -691,7 +697,8 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left fade-up">
-      <p class="hero-eyebrow"><span>Sports Romance</span> · Author</p>
+      <p class="hero-eyebrow"><span>Romance</span> · Author</p>
+      
       <h1 class="hero-headline">
         <span class="word-love">Love.</span><br>
         <span class="word-comp">Competition.</span><br>
@@ -706,57 +713,33 @@
     </div>
     <div class="hero-right fade-up" style="transition-delay:0.2s">
       <div class="book-stack">
-        <img src="images/long-game-placeholder.svg" alt="The Long Game" class="book-back" />
-        <img src="images/beyond-the-arc.png" alt="Beyond the Arc by Monet Simone" class="book-front" />
+        <img src="long-game-placeholder.svg" alt="The Long Game" class="book-back" />
+        <img src="beyond-the-arc.png" alt="Beyond the Arc by Monet Simone" class="book-front" />
+        <span class="coming-soon-badge">Coming July 2026</span>
       </div>
     </div>
   </section>
 
   <div class="section-rule"></div>
 
-  <!-- BOOKS -->
-  <section id="books">
-    <div class="section-header fade-up">
-      <span class="section-eyebrow">The Starting Lineup Series</span>
-      <h2 class="section-title">The Books</h2>
-      <p class="section-sub">Sports romance that plays for keeps.</p>
-    </div>
-
-    <div class="book-entry fade-up">
-      <span class="book-number" aria-hidden="true">01</span>
-      <div class="book-cover-wrap">
-        <img src="images/beyond-the-arc.png" alt="Beyond the Arc book cover" />
-      </div>
-      <div class="book-info">
-        <div class="book-tags">
-          <span class="tag">Sports Romance</span>
-          <span class="tag tag-red">✦ Available Now</span>
-        </div>
-        <h3 class="book-title">Beyond the Arc</h3>
-        <p class="book-desc">The first book in the Starting Lineup Series. She didn't come to play — but he's changing all the rules. A slow-burn romance with all the tension of a game-winning shot and twice the heart.</p>
-        <div class="book-actions">
-          <a href="https://a.co/d/0dqC8Fao" target="_blank" class="btn-primary">Read Now →</a>
-          <a href="#" class="btn-ghost">Add to List</a>
-        </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-image-wrap fade-up">
+      <img src="author-photo.jpeg" alt="Monet Simone, author" />
+      <div class="about-stat">
+        <div class="about-stat-num">2</div>
+        <div class="about-stat-label">Books in Series</div>
       </div>
     </div>
-
-    <div class="book-entry fade-up">
-      <span class="book-number" aria-hidden="true">02</span>
-      <div class="book-cover-wrap">
-        <img src="images/long-game-placeholder.svg" alt="The Long Game book cover" />
-      </div>
-      <div class="book-info">
-        <div class="book-tags">
-          <span class="tag">Sports Romance</span>
-          <span class="tag tag-red">✦ Coming July 2026</span>
-        </div>
-        <h3 class="book-title">The Long Game</h3>
-        <p class="book-desc">Book two of the Starting Lineup Series. Some wins take time — and this one is worth every second. A second-chance romance about patience, trust, and the kind of love you have to earn. <span class="avail">Available July 2026.</span></p>
-        <div class="book-actions">
-          <a href="#newsletter" class="btn-primary">Get Notified →</a>
-          <a href="https://preview.mailerlite.io/forms/1500532/166919130319947546/share" target="_blank" class="btn-ghost">Join the Squad</a>
-        </div>
+    <div class="fade-up" style="transition-delay:0.15s">
+      <p class="about-eyebrow">The Author</p>
+      <h2 class="about-heading">Hi, I'm <em>Monet Simone.</em></h2>
+      <p class="about-body">I write sports romance for readers who want it all — the butterflies, the banter, the big feelings, and the moments that make you put the book down just to collect yourself.</p>
+      <p class="about-body">The Starting Lineup Series was born from my love of competition, chemistry, and characters who push each other to be better — on the court and off it.</p>
+      <p class="about-body">When I'm not writing, I'm probably watching basketball, plotting the next book in the series, and enjoying time with my family.</p>
+      <div class="about-buttons">
+        <a href="https://preview.mailerlite.io/forms/1500532/166919130319947546/share" target="_blank" class="btn-primary">Join the Squad</a>
+        <a href="#books" class="btn-ghost">Start the Series</a>
       </div>
     </div>
   </section>
@@ -773,24 +756,47 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-image-wrap fade-up">
-      <img src="images/author-photo.jpeg" alt="Monet Simone, author" />
-      <div class="about-stat">
-        <div class="about-stat-num">2</div>
-        <div class="about-stat-label">Books in Series</div>
+  <!-- BOOKS -->
+  <section id="books">
+    <div class="section-header fade-up">
+      <span class="section-eyebrow">The Starting Lineup Series</span>
+      <h2 class="section-title">The Books</h2>
+      <p class="section-sub">Sports romance that plays for keeps.</p>
+    </div>
+
+    <div class="book-entry fade-up">
+      <span class="book-number" aria-hidden="true">01</span>
+      <div class="book-cover-wrap">
+        <img src="beyond-the-arc.png" alt="Beyond the Arc book cover" />
+      </div>
+      <div class="book-info">
+        <div class="book-tags">
+          <span class="tag">Sports Romance</span>
+          <span class="tag tag-red">✦ Available Now</span>
+        </div>
+        <h3 class="book-title">Beyond the Arc</h3>
+        <p class="book-desc">Beyond the Arc is a slow-burn sports romance about Indira James, an ambitious Detroit realtor, and Malik Latimer, the NBA superstar who challenges everything she thought she wanted. As attraction turns into something deeper, both must learn to trust love despite the scars of their pasts. 🖤</p>
+        <div class="book-actions">
+          <a href="https://a.co/d/0dqC8Fao" target="_blank" class="btn-primary">Read Now →</a>
+        </div>
       </div>
     </div>
-    <div class="fade-up" style="transition-delay:0.15s">
-      <p class="about-eyebrow">The Author</p>
-      <h2 class="about-heading">Hi, I'm <em>Monet Simone.</em></h2>
-      <p class="about-body">I write sports romance for readers who want it all — the butterflies, the banter, the big feelings, and the moments that make you put the book down just to collect yourself.</p>
-      <p class="about-body">The Starting Lineup Series was born from my love of competition, chemistry, and characters who push each other to be better — on the court and off it.</p>
-      <p class="about-body">When I'm not writing, I'm probably rewatching game-winning plays, arguing about fictional athletes with my readers, and plotting the next book in the series. Welcome to the team.</p>
-      <div class="about-buttons">
-        <a href="https://preview.mailerlite.io/forms/1500532/166919130319947546/share" target="_blank" class="btn-primary">Join the Squad</a>
-        <a href="#books" class="btn-ghost">Start the Series</a>
+
+    <div class="book-entry fade-up">
+      <span class="book-number" aria-hidden="true">02</span>
+      <div class="book-cover-wrap">
+        <img src="long-game-placeholder.svg" alt="The Long Game book cover" />
+      </div>
+      <div class="book-info">
+        <div class="book-tags">
+          <span class="tag">Sports Romance</span>
+          <span class="tag tag-red">✦ Coming July 2026</span>
+        </div>
+        <h3 class="book-title">The Long Game</h3>
+        <p class="book-desc">The Long Game is a friends-to-lovers romance about Cairo Clayton, a guarded basketball coach carrying painful secrets, and Desmond "DC" Montague, a retired NBA superstar forced to confront the life and love he walked away from. What begins as a fake relationship to protect his image soon becomes impossible to fake as years of tension, loyalty, and unresolved feelings rise to the surface. ❤️‍🔥</p>
+        <div class="book-actions">
+          <a href="#newsletter" class="btn-primary">Get Notified →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -824,7 +830,7 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div>
-          <div class="footer-brand">Monet Simone</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:4px;">Monet Simone</div>
           <div class="footer-brand-sub">Author · Starting Lineup Series</div>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
