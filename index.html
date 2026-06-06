@@ -714,7 +714,7 @@
     <div class="hero-right fade-up" style="transition-delay:0.2s">
       <div class="book-stack">
         <img src="beyond-the-arc.png" alt="Beyond the Arc by Monet Simone" class="book-front" />
-        <img src="the-long-game-cover.jpg" alt="The Long Game by Monet Smnone" class="book-back" />
+        <img src="the-long-game-cover.jpg" alt="The Long Game by Monet Simone" class="book-back" />
         <span class="coming-soon-badge">Coming July 2026</span>
       </div>
     </div>
@@ -785,7 +785,7 @@
     <div class="book-entry fade-up">
       <span class="book-number" aria-hidden="true">02</span>
       <div class="book-cover-wrap">
-        <img src="long-game-placeholder.svg" alt="The Long Game book cover" />
+        <img src="the-long-game-cover.jpg" alt="The Long Game book cover" />
       </div>
       <div class="book-info">
         <div class="book-tags">
@@ -819,7 +819,17 @@
       <span class="perk">Reader exclusives</span>
     </div>
     <div class="newsletter-form fade-up" style="max-width:600px;margin:0 auto;width:100%;">
-      <iframe src="https://form.jotform.com/261377890342059" title="Contact and Newsletter Form" style="width:100%;min-height:520px;border:none;border-radius:4px;" scrolling="no" allowtransparency="true"></iframe>
+      <script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+      <iframe id="jotform-newsletter" src="https://form.jotform.com/261377890342059" title="Contact and Newsletter Form" style="width:100%;min-height:600px;border:none;border-radius:4px;overflow:visible;" scrolling="no" allowtransparency="true"></iframe>
+      <script>
+        window.addEventListener("message", function(e) {
+          if (typeof e.data === "object" && e.data.action === "submission-completed") return;
+          if (typeof e.data === "string" && e.data.startsWith("setHeight")) {
+            var height = e.data.split(":")[1];
+            document.getElementById("jotform-newsletter").style.height = height + "px";
+          }
+        });
+      </script>
     </div>
     <p class="newsletter-disclaimer fade-up">No spam. Unsubscribe anytime. Your inbox is safe with me.</p>
   </section>
